@@ -19,12 +19,36 @@
   </properties>
 
   <dependencies>
-    <dependency>
+    <!-- <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
       <version>4.11</version>
       <scope>test</scope>
-    </dependency>
+    </dependency> -->
+
+    <!-- Added latest version of Junit -->
+  <dependency>
+      <groupId>org.junit.jupiter</groupId>
+      <artifactId>junit-jupiter-api</artifactId>
+      <version>5.10.1</version>
+      <scope>test</scope>
+  </dependency>
+  <dependency>
+      <groupId>org.junit.jupiter</groupId>
+      <artifactId>junit-jupiter-engine</artifactId>
+      <version>5.10.1</version>
+      <scope>test</scope>
+  </dependency>
+
+  <!-- Dependency for testing older versions of JUnit such as JUnit 4 -->
+  <dependency>
+      <groupId>org.junit.vintage</groupId>
+      <artifactId>junit-vintage-engine</artifactId>
+      <version>5.10.1</version>
+      <scope>test</scope>
+  </dependency>
+
+    <!-- Other dependencies like joda-time -->
     <dependency>
       <groupId>joda-time</groupId>
       <artifactId>joda-time</artifactId>
@@ -51,7 +75,7 @@
         </plugin>
         <plugin>
           <artifactId>maven-surefire-plugin</artifactId>
-          <version>2.22.1</version>
+          <version>3.2.5</version> <!-- changed surefire from 2.22.1 to 3.2.5 version -->
         </plugin>
         <plugin>
           <artifactId>maven-jar-plugin</artifactId>
