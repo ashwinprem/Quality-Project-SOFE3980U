@@ -1,6 +1,7 @@
 package com.ontariotechu.sofe3980U;
 
-import org.joda.time.LocalTime;
+//import org.joda.time.LocalTime;
+import java.time.LocalTime;
 
 /**
  * Hello world!
@@ -16,8 +17,7 @@ public class App
 	*/
     public static void main( String[] args )
     {
-      LocalTime currentTime = new LocalTime();
-
+      LocalTime currentTime = LocalTime.now(); // changed from '= new LocalTime()'
       System.out.println("The current local time is: " + currentTime);
 
       Binary binary1 = new Binary("00010001000");
